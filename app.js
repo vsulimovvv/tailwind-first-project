@@ -4,6 +4,9 @@
   new Swiper(sliderEl, {
     slidesPerView: 1,
     spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+    },
     loop: true,
     pagination: {
       el: '.swiper-pagination',
