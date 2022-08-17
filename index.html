@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Cootels</title>
+  </head>
+
+  <body>
+    <header class="header py-5 z-[10]">
+      <!-- Mobile Menu -->
+      <div class="overlay"></div>
+
+      <div
+        class="mobile-menu z-[10] absolute bg-dark text-white w-[80%] top-0 left-0 h-[100vh] p-9 duration-500"
+      >
+        <button class="mobile-menu__close absolute top-5 right-5 text-4xl" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul class="flex flex-col items-center">
+          <li class="">
+            <a class="block py-2 px-5" href="#"> Rooms </a>
+          </li>
+          <li class="">
+            <a class="block py-2 px-5" href="#"> Reservation </a>
+          </li>
+          <li class="">
+            <a class="block py-2 px-5" href="#"> Contacs </a>
+          </li>
+        </ul>
+      </div>
+      <!--  Mobile Menu -->
+
+      <div class="container">
+        <nav class="flex justify-between items-center">
+          <a class="text-lg font-semibold hover:opacity-80 transition" href="#">
+            Cootels
+          </a>
+          <ul class="flex gap-8 items-center lg:hidden">
+            <li class="">
+              <a class="hover:text-red transition-all" href="#">Rooms</a>
+            </li>
+            <li>
+              <a class="hover:text-red transition-all" href="#">Reservation</a>
+            </li>
+            <li>
+              <a class="hover:text-red transition-all" href="#">Contacs</a>
+            </li>
+          </ul>
+
+          <button class="btn lg:ml-auto mr-5">Get Started</button>
+
+          <button class="toggle" type="button" aria-label="Открыть меню">
+            <span class="toggle-line"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero py-20 lg:py-16 md:py-10">
+        <div class="container">
+          <div
+            class="grid grid-cols-[1fr_590px] justify-between items-center gap-10 xl:grid-cols-[1fr_500px] lg:grid-cols-1 lg:text-center lg:gap-9"
+          >
+            <div class="w-full lg:max-w-full">
+              <h1
+                class="text-5xl mb-6 font-semibold lg:text-4xl lg:w-[80%] lg:mx-auto md:m-full md:text-3xl sm:text-2xl"
+              >
+                Nature, Warmth, and Beauty in One Space
+              </h1>
+              <p class="mb-8 md:text-base">
+                One place to release all the stress, bring back happines, and
+                get back to nature. We provide the best room and nature for you.
+                Come visit us anytime you want.
+              </p>
+              <button class="btn">Reservation</button>
+            </div>
+
+            <div
+              class="grid grid-cols-3 gap-6 h-[670px] w-full pb-[80px] xl:h-[600px] lg:justify-self-center lg:w-auto md:gap-3 sm:h-[450px]"
+            >
+              <img
+                class="w-full h-[590px] object-contain xl:h-[530px] sm:h-[350px]"
+                src="img/hero/1.jpg"
+                alt="hero-img"
+              />
+              <img
+                class="w-full h-[590px] mt-[80px] object-contain xl:h-[530px] sm:h-[350px] sm:mt-[50px]"
+                src="img/hero/2.jpg"
+                alt="hero-img"
+              />
+              <img
+                class="w-full h-[590px] object-contain xl:h-[530px] sm:h-[350px]"
+                src="img/hero/3.jpg"
+                alt="hero-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cottage py-20 lg:py-16 md:py-10">
+        <div class="container">
+          <div
+            class="grid grid-cols-[385px_1fr] justify-between gap-10 items-center lg:grid-cols-[300px_1fr] md:grid-cols-1 md:text-center"
+          >
+            <img
+              class="h-[580px] object-cover xl:h-[500px] md:justify-self-center sm:h-[300px]"
+              src="img/cottage.jpg"
+              alt="cottage"
+            />
+            <div class="max-w-[660px] justify-self-end md:justify-self-center">
+              <h1 class="mb-6 text-4xl font-semibold lg:text-3xl md:text-2xl">
+                Cozy and Down to Earth Cootage Hotel in Norway.
+              </h1>
+              <div class="md:text-base">
+                <p class="mb-4">
+                  Our Cootage Hotel is an intimate hideway concieved for
+                  dicerning travelers. It faces directly the unique and
+                  spectacular panorama of the Hallerbos Jungle.
+                </p>
+                <p class="mb-4">
+                  Cootels extends along a private, quiet, and beautiful nature.
+                  Stay away from crowd and enjoy the cozy and beauty with us.
+                </p>
+              </div>
+              <a class="btn mb-8" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="activites pt-[80px] pb-2">
+        <div class="container">
+          <div
+            class="grid grid-cols-[1fr_385px] gap-10 justify-between items-center lg:grid-cols-[1fr_300px] md:grid-cols-1 md:text-center md:gap-6"
+          >
+            <div
+              class="max-w-[585px] justify-self-start md:justify-self-center"
+            >
+              <h1 class="mb-6 text-4xl font-semibold lg:text-3xl md:text-2xl">
+                Cabin Activities
+              </h1>
+              <p class="md:text-base">
+                Don’t worry to get bored easily in our cabin. We have so many
+                cabin activities for you to do it alone or with group. Maybe
+                this is the best chance for you to make new friends or even a
+                lover.
+              </p>
+            </div>
+
+            <img
+              class="h-[385px] object-cover lg:h-[300px] md:justify-self-center md:mb-8"
+              src="img/activities.jpg"
+              alt="cottage"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="organic-food pb-[80px] pt-2">
+        <div class="container">
+          <div
+            class="grid grid-cols-[385px_1fr] gap-10 justify-between items-center lg:grid-cols-[300px_1fr] md:grid-cols-1 md:text-center md:gap-6"
+          >
+            <img
+              class="h-[385px] object-cover lg:h-[300px] md:justify-self-center md:mb-8 md:order-1"
+              src="img/organic-food.jpg"
+              alt="cottage"
+            />
+            <div class="max-w-[585px] justify-self-end md:justify-self-center">
+              <h1 class="mb-6 text-4xl font-semibold lg:text-3xl md:text-2xl">
+                100% Organic Food
+              </h1>
+              <p class="md:text-base">
+                We served 100% organic, low process and delicious food. We allow
+                our guest to have breakfast or dinner request.What ever made
+                your taste buds happy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rooms py-20 lg:py-16">
+        <div class="container">
+          <div class="mx-auto max-w-[590px] mb-[88px] text-center md:mb-[40px]">
+            <h2 class="text-4xl font-semibold mb-6 lg:text-3xl md:text-2xl">
+              Many Rooms to Choose
+            </h2>
+            <p class="mb-8 md:mb-6 md:text-base">
+              There is a room for every needs. We have room for individuals
+              until family size, we also have a cabin for more private
+              experience
+            </p>
+            <a class="btn" href="#">Explore more</a>
+          </div>
+
+          <ul
+            class="grid grid-cols-3 gap-6 lg:gap-5 md:grid-cols-2 md:gap-y-10 xs:grid-cols-1"
+          >
+            <li class="w-full">
+              <article>
+                <a
+                  class="block mb-8 overflow-hidden hover:opacity-80 transition duration-700 lg:mb-6 md:mb-4"
+                  href="#"
+                >
+                  <img
+                    class="w-full h-[490px] object-cover lg:h-[350px] sm:h-[250px] transition"
+                    src="img/rooms/1.jpg"
+                    alt="rooms"
+                  />
+                </a>
+                <div>
+                  <h3
+                    class="font-semibold text-2xl mb-4 lg:text-xl sm:text-lg md:mb-3"
+                  >
+                    <a href="#">Single Room</a>
+                  </h3>
+                  <p class="mb-8 lg:mb-6 lg:text-base md:mb-4 sm:text-sm">
+                    Best for a brave lone wolf who need comfort and quiet
+                    quality time, but you still have a chance to meet others.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn inline-flex items-center md:text-base sm:text-sm"
+                  >
+                    <span class="mr-3">Learn more</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="w-full">
+              <article>
+                <a
+                  class="block mb-8 overflow-hidden hover:opacity-80 transition duration-700 lg:mb-6 md:mb-4"
+                  href="#"
+                >
+                  <img
+                    class="w-full h-[490px] object-cover lg:h-[350px] sm:h-[250px] transition"
+                    src="img/rooms/2.jpg"
+                    alt="rooms"
+                  />
+                </a>
+                <div>
+                  <h3
+                    class="font-semibold text-2xl mb-4 lg:text-xl sm:text-lg md:mb-3"
+                  >
+                    <a href="#">Single Room</a>
+                  </h3>
+                  <p class="mb-8 lg:mb-6 lg:text-base md:mb-4 sm:text-sm">
+                    Best for a brave lone wolf who need comfort and quiet
+                    quality time, but you still have a chance to meet others.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn inline-flex items-center md:text-base sm:text-sm"
+                  >
+                    <span class="mr-3">Learn more</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="w-full">
+              <article>
+                <a
+                  class="block mb-8 overflow-hidden hover:opacity-80 transition duration-700 lg:mb-6 md:mb-4"
+                  href="#"
+                >
+                  <img
+                    class="w-full h-[490px] object-cover lg:h-[350px] sm:h-[250px] transition"
+                    src="img/rooms/3.jpg"
+                    alt="rooms"
+                  />
+                </a>
+                <div>
+                  <h3
+                    class="font-semibold text-2xl mb-4 lg:text-xl sm:text-lg md:mb-3"
+                  >
+                    <a href="#">Single Room</a>
+                  </h3>
+                  <p class="mb-8 lg:mb-6 lg:text-base md:mb-4 sm:text-sm">
+                    Best for a brave lone wolf who need comfort and quiet
+                    quality time, but you still have a chance to meet others.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn inline-flex items-center md:text-base sm:text-sm"
+                  >
+                    <span class="mr-3">Learn more</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="reviews py-20 lg:py-16">
+        <div class="container">
+          <h2
+            class="mb-16 text-4xl font-semibold text-center lg:text-3xl md:text-2xl"
+          >
+            Hear From Our Happy Customers
+          </h2>
+
+          <div class="reviews__slider swiper pb-[60px]">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide mx-auto">
+                <div
+                  class="max-w-[800px] text-center flex flex-col items-center mx-auto"
+                >
+                  <img
+                    class="block mb-11 w-[120px] h-[120px] rounded-full object-cover md:mb-6"
+                    src="img/reviews/1.jpg"
+                    alt="reviews"
+                  />
+                  <div class="mb-10">
+                    <p class="md:text-base">
+                      “Great service, great food, great people. The scenery is
+                      also beautiful, you can do so much activity even with your
+                      famility. Worth every penny! you should come and see for
+                      your self. 5 out of 5! the waffle is great!”
+                    </p>
+                  </div>
+                  <span class="text-xl font-medium">Kirana Dunham</span>
+                </div>
+              </li>
+              <li class="swiper-slide mx-auto">
+                <div
+                  class="max-w-[800px] text-center flex flex-col items-center mx-auto"
+                >
+                  <img
+                    class="block mb-11 w-[120px] h-[120px] rounded-full object-cover md:mb-6"
+                    src="img/reviews/2.jpg"
+                    alt="reviews"
+                  />
+                  <div class="mb-10">
+                    <p class="md:text-base">
+                      “Great service, great food, great people. The scenery is
+                      also beautiful, you can do so much activity even with your
+                      famility. Worth every penny! you should come and see for
+                      your self. 5 out of 5! the waffle is great!”
+                    </p>
+                  </div>
+                  <span class="text-xl font-medium">Helena Bonham Carter</span>
+                </div>
+              </li>
+              <li class="swiper-slide mx-auto">
+                <div
+                  class="max-w-[800px] text-center flex flex-col items-center mx-auto"
+                >
+                  <img
+                    class="block mb-11 w-[120px] h-[120px] rounded-full object-cover md:mb-6"
+                    src="img/reviews/3.jpg"
+                    alt="reviews"
+                  />
+                  <div class="mb-10">
+                    <p class="md:text-base">
+                      “Great service, great food, great people. The scenery is
+                      also beautiful, you can do so much activity even with your
+                      famility. Worth every penny! you should come and see for
+                      your self. 5 out of 5! the waffle is great!”
+                    </p>
+                  </div>
+                  <span class="text-xl font-medium">James Franco</span>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-[120px] lg:py-[90px] md:py-[60px] bg-purple">
+      <div class="container">
+        <div
+          class="text-white grid grid-cols-[200px_minmax(auto,_550px)] justify-between gap-20 md:grid-cols-1 md:gap-10"
+        >
+          <div>
+            <a
+              class="block text-lg font-semibold mb-3 hover:opacity-80 transition"
+              href="#"
+              >Cootels</a
+            >
+
+            <div class="mb-9">
+              <p>Your Best Private.</p>
+              <p>Hideway From Crowd.</p>
+              <p>Back to Nature.</p>
+            </div>
+
+            <div class="text-white">
+              <ul class="flex gap-6">
+                <li>
+                  <a class="flex justify-center items-center w-8 h-8" href="#">
+                    <i class="fa-brands fa-twitter text-3xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="flex justify-center items-center w-8 h-8" href="#">
+                    <i class="fa-brands fa-instagram text-3xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="flex justify-center items-center w-8 h-8" href="#">
+                    <i class="fa-brands fa-facebook-f text-3xl"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-3 gap-8 max-w-full text-base md:grid-cols-1"
+          >
+            <div class="">
+              <p class="mb-6 font-bold">Rooms</p>
+              <ul class="grid gap-6">
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href="">
+                    Single Room
+                  </a>
+                </li>
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                    >Double Room</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                    >Cabin</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                    >Custom Room</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="">
+              <p class="mb-6 font-bold">Reservation</p>
+              <ul class="grid gap-6">
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                    >See the Steps</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                    >Best Time</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="">
+              <p class="mb-6 font-bold">Contact</p>
+              <ul class="grid gap-6">
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                    >Our Number</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                    >Our Email</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                    >Our Location</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
+
+    <!-- App JS -->
+    <script src="app.js"></script>
+  </body>
+</html>

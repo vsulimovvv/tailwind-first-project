@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* npx tailwindcss -i ./css/input.css -o ./css/output.css --watch */
+
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  img {
+    display: block;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1230px];
+    @apply text-dark;
+    @apply text-[18px];
+  }
+
+  .btn {
+    @apply inline-block py-3 px-4 text-white border-2 bg-dark rounded text-base transition hover:bg-transparent hover:text-dark;
+  }
+
+  .swiper-pagination {
+    @apply flex justify-center items-center;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    @apply w-2 h-2 bg-orange-35 opacity-[1] transition;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet-active {
+    @apply w-3 h-3 bg-orange opacity-[1];
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  transition: 200ms ease-in;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 550ms ease;
+}
+
+.toggle {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .toggle {
+    flex-shrink: 0;
+    width: 26px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 350ms ease-in;
+  }
+}
+
+.toggle-line {
+  border-radius: 3px;
+  width: 100%;
+  height: 2px;
+  background-color: #0e1734;
+  position: relative;
+  transition: 150ms ease-in;
+}
+.toggle-line::after,
+.toggle-line::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: inherit;
+  transition: 450ms ease-in;
+  border-radius: 3px;
+}
+.toggle-line::after {
+  top: -7px;
+}
+.toggle-line::before {
+  bottom: -7px;
+}
+
+.mobile-menu {
+  transform: translateX(-100%);
+}
+.mobile-menu.active {
+  transform: translateX(0);
+}
