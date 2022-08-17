@@ -593,7 +593,8 @@ img {
 }
 
 .btn:hover {
-  background-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(14 23 52 / var(--tw-text-opacity));
 }
@@ -623,6 +624,10 @@ img {
   opacity: 1;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -643,12 +648,12 @@ img {
   right: 1.25rem;
 }
 
-.z-\[9\] {
-  z-index: 9;
+.right-2 {
+  right: 0.5rem;
 }
 
-.z-\[11\] {
-  z-index: 11;
+.bottom-2 {
+  bottom: 0.5rem;
 }
 
 .z-\[10\] {
@@ -933,19 +938,24 @@ img {
   text-align: center;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-2xl {
@@ -1016,6 +1026,23 @@ img {
 
 body.no-scroll {
   overflow: hidden;
+}
+
+html.dark body .container {
+  color: #fff;
+}
+
+html.dark body .btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+html.dark body footer {
+  background-color: #000;
+}
+
+html.dark body .toggle-line {
+  background-color: #fff;
 }
 
 .overlay {
@@ -1105,6 +1132,11 @@ body.no-scroll {
 
 .hover\:opacity-80:hover {
   opacity: 0.8;
+}
+
+.dark .dark\:bg-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 23 52 / var(--tw-bg-opacity));
 }
 
 @media (max-width: 1230px) {

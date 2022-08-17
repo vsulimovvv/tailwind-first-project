@@ -21,7 +21,7 @@
   }
 
   .btn {
-    @apply inline-block py-3 px-4 text-white border-2 bg-dark rounded text-base transition hover:bg-transparent hover:text-dark;
+    @apply inline-block py-3 px-4 text-white border-2 bg-dark rounded text-base transition hover:bg-white hover:text-dark;
   }
 
   .swiper-pagination {
@@ -39,6 +39,19 @@
 
 body.no-scroll {
   overflow: hidden;
+}
+html.dark body .container {
+  color: #fff;
+}
+html.dark body .btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+html.dark body footer {
+  background-color: #000;
+}
+html.dark body .toggle-line {
+  background-color: #fff;
 }
 .overlay {
   position: absolute;

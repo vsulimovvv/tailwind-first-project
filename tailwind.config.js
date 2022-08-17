@@ -1,5 +1,6 @@
 module.exports = {
   content: ['./*.html'],
+  darkMode: 'class',
   theme: {
     screens: {
       xl: { max: '1230px' },

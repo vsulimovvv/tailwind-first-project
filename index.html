@@ -29,7 +29,7 @@
     <title>Cootels</title>
   </head>
 
-  <body>
+  <body class="dark:bg-dark transition">
     <header class="header py-5 z-[10]">
       <!-- Mobile Menu -->
       <div class="overlay"></div>
@@ -37,7 +37,10 @@
       <div
         class="mobile-menu z-[10] absolute bg-dark text-white w-[80%] top-0 left-0 h-[100vh] p-9 duration-500"
       >
-        <button class="mobile-menu__close absolute top-5 right-5 text-4xl" type="button">
+        <button
+          class="mobile-menu__close absolute top-5 right-5 text-4xl"
+          type="button"
+        >
           <i class="fa-solid fa-xmark"></i>
         </button>
         <ul class="flex flex-col items-center">
@@ -81,6 +84,9 @@
     </header>
 
     <main>
+      <button id="theme" class="btn fixed right-2 bottom-2 text-sm">
+        Change Theme
+      </button>
       <section class="hero py-20 lg:py-16 md:py-10">
         <div class="container">
           <div
