@@ -33,7 +33,9 @@
   </head>
 
   <body class="dark:bg-dark transition">
-    <header class="header py-5 z-[10]">
+    <header
+      class="header py-5 z-[10] fixed top-0 left-0 w-full bg-white dark:bg-dark"
+    >
       <!-- Mobile Menu -->
       <div class="overlay"></div>
 
@@ -46,34 +48,81 @@
         >
           <i class="fa-solid fa-xmark"></i>
         </button>
-        <ul class="flex flex-col items-center">
-          <li class="">
-            <a class="block py-2 px-5" href="#"> Rooms </a>
+        <ul
+          class="flex flex-col items-center text-xl gap-5 justify-center h-full"
+        >
+          <li>
+            <a class="mobile-menu-link block py-2 px-5" href="#reservation"
+              >Reservation</a
+            >
           </li>
-          <li class="">
-            <a class="block py-2 px-5" href="#"> Reservation </a>
+          <li>
+            <a class="mobile-menu-link block py-2 px-5" href="#cootage"
+              >Cootage</a
+            >
           </li>
-          <li class="">
-            <a class="block py-2 px-5" href="#"> Contacs </a>
+          <li>
+            <a class="mobile-menu-link block py-2 px-5" href="#advantages"
+              >Advantages</a
+            >
+          </li>
+          <li>
+            <a class="mobile-menu-link block py-2 px-5" href="#rooms">Rooms</a>
+          </li>
+          <li>
+            <a class="mobile-menu-link block py-2 px-5" href="#reviews"
+              >Customers</a
+            >
           </li>
         </ul>
       </div>
       <!--  Mobile Menu -->
 
       <div class="container">
-        <nav class="flex justify-between items-center">
+        <nav class="menu flex justify-between items-center">
           <a class="text-lg font-semibold hover:opacity-80 transition" href="#">
             Cootels
           </a>
-          <ul class="flex gap-8 items-center lg:hidden">
-            <li class="">
-              <a class="hover:text-red transition-all" href="#">Rooms</a>
+          <ul class="flex gap-4 items-center xl:gap-3 lg:hidden">
+            <li>
+              <a
+                class="menu-link py-2 px-4 xl:px-3 hover:text-red transition-all"
+                href="#reservation"
+              >
+                Reservation
+              </a>
             </li>
             <li>
-              <a class="hover:text-red transition-all" href="#">Reservation</a>
+              <a
+                class="menu-link py-2 px-4 xl:px-3 hover:text-red transition-all"
+                href="#cootage"
+              >
+                Cootage
+              </a>
             </li>
             <li>
-              <a class="hover:text-red transition-all" href="#">Contacs</a>
+              <a
+                class="menu-link py-2 px-4 xl:px-3 hover:text-red transition-all"
+                href="#advantages"
+              >
+                Advantages
+              </a>
+            </li>
+            <li>
+              <a
+                class="menu-link active py-2 px-4 xl:px-3 hover:text-red transition-all"
+                href="#rooms"
+              >
+                Rooms
+              </a>
+            </li>
+            <li>
+              <a
+                class="menu-link py-2 px-4 xl:px-3 hover:text-red transition-all"
+                href="#reviews"
+              >
+                Customers
+              </a>
             </li>
           </ul>
 
@@ -86,11 +135,19 @@
       </div>
     </header>
 
-    <main>
-      <button id="theme" class="btn fixed right-2 bottom-2 text-sm">
+    <main class="mt-[90px]">
+      <button id="theme" class="btn fixed left-2 bottom-6 text-sm z-[5]">
         Change Theme
       </button>
-      <section class="hero py-20 lg:py-16 md:py-10">
+
+      <button
+        class="btn-scroll-top fixed bottom-[-20%] w-[40px] h-[40px] right-5 flex justify-center items-center bg-dark text-white cursor-pointer z-[8] rounded-[6px] hover:opacity-[1] dark:bg-slate-100 dark:text-dark"
+        type="button"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+      <section class="hero py-20 lg:py-16 md:py-10" id="reservation">
         <div class="container">
           <div
             class="grid grid-cols-[1fr_590px] justify-between items-center gap-10 xl:grid-cols-[1fr_500px] lg:grid-cols-1 lg:text-center lg:gap-9"
@@ -132,7 +189,7 @@
         </div>
       </section>
 
-      <section class="cottage py-20 lg:py-16 md:py-10">
+      <section class="cottage py-20 lg:py-16 md:py-10" id="cootage">
         <div class="container">
           <div
             class="grid grid-cols-[385px_1fr] justify-between gap-10 items-center lg:grid-cols-[300px_1fr] md:grid-cols-1 md:text-center"
@@ -163,7 +220,7 @@
         </div>
       </section>
 
-      <section class="activites pt-[80px] pb-2">
+      <section class="activites pt-[80px] pb-2" id="advantages">
         <div class="container">
           <div
             class="grid grid-cols-[1fr_385px] gap-10 justify-between items-center lg:grid-cols-[1fr_300px] md:grid-cols-1 md:text-center md:gap-6"
@@ -215,7 +272,7 @@
         </div>
       </section>
 
-      <section class="rooms py-20 lg:py-16">
+      <section class="rooms py-20 lg:py-16" id="rooms">
         <div class="container">
           <div class="mx-auto max-w-[590px] mb-[88px] text-center md:mb-[40px]">
             <h2 class="text-4xl font-semibold mb-6 lg:text-3xl md:text-2xl">
@@ -332,7 +389,7 @@
         </div>
       </section>
 
-      <section class="reviews py-20 lg:py-16">
+      <section class="reviews py-20 lg:py-16" id="reviews">
         <div class="container">
           <h2
             class="mb-16 text-4xl font-semibold text-center lg:text-3xl md:text-2xl"
@@ -418,8 +475,9 @@
             <a
               class="block text-lg font-semibold mb-3 hover:opacity-80 transition"
               href="#"
-              >Cootels</a
             >
+              Cootels
+            </a>
 
             <div class="mb-9">
               <p>Your Best Private.</p>
@@ -454,24 +512,36 @@
               <p class="mb-6 font-bold">Rooms</p>
               <ul class="grid gap-6">
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href="">
+                  <a
+                    class="text-[#D9DBDE] hover:text-white transition"
+                    href="#"
+                  >
                     Single Room
                   </a>
                 </li>
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
-                    >Double Room</a
+                  <a
+                    class="text-[#D9DBDE] hover:text-white transition"
+                    href="#"
                   >
+                    Double Room
+                  </a>
                 </li>
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
-                    >Cabin</a
+                  <a
+                    class="text-[#D9DBDE] hover:text-white transition"
+                    href="#"
                   >
+                    Cabin
+                  </a>
                 </li>
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
-                    >Custom Room</a
+                  <a
+                    class="text-[#D9DBDE] hover:text-white transition"
+                    href="#"
                   >
+                    Custom Room
+                  </a>
                 </li>
               </ul>
             </div>
@@ -479,12 +549,12 @@
               <p class="mb-6 font-bold">Reservation</p>
               <ul class="grid gap-6">
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                  <a class="text-[#D9DBDE] hover:text-white transition" href="#"
                     >See the Steps</a
                   >
                 </li>
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
+                  <a class="text-[#D9DBDE] hover:text-white transition" href="#"
                     >Best Time</a
                   >
                 </li>
@@ -494,19 +564,28 @@
               <p class="mb-6 font-bold">Contact</p>
               <ul class="grid gap-6">
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
-                    >Our Number</a
+                  <a
+                    class="text-[#D9DBDE] hover:text-white transition"
+                    href="#"
                   >
+                    1483369
+                  </a>
                 </li>
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
-                    >Our Email</a
+                  <a
+                    class="text-[#D9DBDE] hover:text-white transition"
+                    href="#"
                   >
+                    cootels@gmail.com
+                  </a>
                 </li>
                 <li>
-                  <a class="text-[#D9DBDE] hover:text-white transition" href=""
-                    >Our Location</a
+                  <a
+                    class="text-[#D9DBDE] hover:text-white transition"
+                    href="#"
                   >
+                    3828 Piermont Dr NE, Albuquerque, NM 87111-3416
+                  </a>
                 </li>
               </ul>
             </div>
